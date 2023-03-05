@@ -5,23 +5,23 @@
 class Gut < Formula
   desc "Gut is an easy to use Git client for the command line."
   homepage "https://gut-cli.dev"
-  version "0.2.3-0"
+  version "0.2.3-1"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/julien040/gut/releases/download/0.2.3-0/gut_Darwin_arm64.tar.gz"
-      sha256 "f5d41ae20d5a92aeea4420089f7eefa4db3cbcba72bc6f59dc8df087c23ef627"
+      url "https://github.com/julien040/gut/releases/download/0.2.3-1/gut_Darwin_arm64.tar.gz"
+      sha256 "6caec1e022dd67452c1fc41850db098326da10837918e0197cadc735d35d879e"
 
       def install
         bin.install "gut"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/julien040/gut/releases/download/0.2.3-0/gut_Darwin_x86_64.tar.gz"
-      sha256 "c26cfec88dffd5a839175fac288e8a33a0a6c884feb99bd9e002033de649be26"
+      url "https://github.com/julien040/gut/releases/download/0.2.3-1/gut_Darwin_x86_64.tar.gz"
+      sha256 "9b68c01efb2abb92f9ef80734c36ab3504f5b0671c2fbaa0a34f5adc8d7da460"
 
       def install
         bin.install "gut"
@@ -31,16 +31,16 @@ class Gut < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/julien040/gut/releases/download/0.2.3-0/gut_Linux_arm64.tar.gz"
-      sha256 "c051c9f494eaafdff4ee31d74a36de33961503eb5b455b0c0709e77d64d8061c"
+      url "https://github.com/julien040/gut/releases/download/0.2.3-1/gut_Linux_arm64.tar.gz"
+      sha256 "b74028bbc63e86ea90058ddd633bff757b200d4ba54f642e8e5c7040c6bc21d7"
 
       def install
         bin.install "gut"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/julien040/gut/releases/download/0.2.3-0/gut_Linux_x86_64.tar.gz"
-      sha256 "6b33362c4ea43a1055d6988989e9e1b977c517f638b547fab193e5314caaeae1"
+      url "https://github.com/julien040/gut/releases/download/0.2.3-1/gut_Linux_x86_64.tar.gz"
+      sha256 "bbbf38bb2152230bc46da2b1d35653b76cd7a8acbdc9acc98663b550dd7d37fa"
 
       def install
         bin.install "gut"
