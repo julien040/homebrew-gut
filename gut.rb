@@ -13,7 +13,7 @@ class Gut < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/julien040/gut/releases/download/0.2.3-1/gut_Darwin_arm64.tar.gz"
-      sha256 "6caec1e022dd67452c1fc41850db098326da10837918e0197cadc735d35d879e"
+      sha256 "df25e7b48a378132f96c1db84ad5d1574e0dfa362c9632224e4fb4fa67e71707"
 
       def install
         bin.install "gut"
@@ -21,7 +21,7 @@ class Gut < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/julien040/gut/releases/download/0.2.3-1/gut_Darwin_x86_64.tar.gz"
-      sha256 "9b68c01efb2abb92f9ef80734c36ab3504f5b0671c2fbaa0a34f5adc8d7da460"
+      sha256 "3ad98906f2e7594a1778fb417245b7ceb3d0c02720f59aeaa1c50edbe8d85903"
 
       def install
         bin.install "gut"
@@ -32,7 +32,7 @@ class Gut < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/julien040/gut/releases/download/0.2.3-1/gut_Linux_arm64.tar.gz"
-      sha256 "b74028bbc63e86ea90058ddd633bff757b200d4ba54f642e8e5c7040c6bc21d7"
+      sha256 "9f403c72b5d29f24ef3e2e6307c37189aaa7c5a446b581e4c9cf0370e8d3789c"
 
       def install
         bin.install "gut"
@@ -40,7 +40,7 @@ class Gut < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/julien040/gut/releases/download/0.2.3-1/gut_Linux_x86_64.tar.gz"
-      sha256 "bbbf38bb2152230bc46da2b1d35653b76cd7a8acbdc9acc98663b550dd7d37fa"
+      sha256 "50d5e346c31adcc1e5d8e006c101e0c548248d46f099a230b2b8c60e0a2ddcc1"
 
       def install
         bin.install "gut"
