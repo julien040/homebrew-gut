@@ -5,23 +5,23 @@
 class Gut < Formula
   desc "Gut is an easy to use Git client for the command line."
   homepage "https://gut-cli.dev"
-  version "0.2.8"
+  version "0.2.9"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/julien040/gut/releases/download/0.2.8/gut_Darwin_arm64.tar.gz"
-      sha256 "5f9cd8beff9a8bf99600bc702f3dbea37a4a7cc3ebc281d937e993622069f324"
+      url "https://github.com/julien040/gut/releases/download/0.2.9/gut_Darwin_arm64.tar.gz"
+      sha256 "d56f1b7c3c8b6e21d231f63d57c2e062cd8c5db3c271c7fdba02b27edc3829f6"
 
       def install
         bin.install "gut"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/julien040/gut/releases/download/0.2.8/gut_Darwin_x86_64.tar.gz"
-      sha256 "9c390f4fd02a9fb8f9bad158bce6caa300ce5e816dd3f9e586b6ca659bd823cc"
+      url "https://github.com/julien040/gut/releases/download/0.2.9/gut_Darwin_x86_64.tar.gz"
+      sha256 "f9a69777f3db8fd9a7ec66154d6b700ab43be5725fd1a55663eb67dc9c89b86b"
 
       def install
         bin.install "gut"
@@ -31,16 +31,16 @@ class Gut < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/julien040/gut/releases/download/0.2.8/gut_Linux_arm64.tar.gz"
-      sha256 "0597a7d9cf9048585d57f3f8a14a7c6b064ccc1f05b56a187260503207f49ed9"
+      url "https://github.com/julien040/gut/releases/download/0.2.9/gut_Linux_arm64.tar.gz"
+      sha256 "a1e0ce835f3c062d3a4bedcbfc4b0a2bf5448905070b8fc1772e9613ba6aa545"
 
       def install
         bin.install "gut"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/julien040/gut/releases/download/0.2.8/gut_Linux_x86_64.tar.gz"
-      sha256 "30beab2b722806dfc4b97b348045cb1821281ddb8233239a58b5f6a686390cbc"
+      url "https://github.com/julien040/gut/releases/download/0.2.9/gut_Linux_x86_64.tar.gz"
+      sha256 "44bd4f3d495701478c6cfafb9971f6f8070b271ca6da4e5756f1f3cf56788c0a"
 
       def install
         bin.install "gut"
