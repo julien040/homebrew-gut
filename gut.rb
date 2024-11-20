@@ -5,23 +5,23 @@
 class Gut < Formula
   desc "Gut is an easy to use Git client for the command line."
   homepage "https://gut-cli.dev"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/julien040/gut/releases/download/0.3.0/gut_Darwin_arm64.tar.gz"
-      sha256 "d9ea991a29daa0d1e94e3a9a839fc5e1071f76111f04d9a758c6c04fc2eeb1f3"
+    on_intel do
+      url "https://github.com/julien040/gut/releases/download/0.3.1/gut_Darwin_x86_64.tar.gz"
+      sha256 "1852c3b00c1388e1da474ad9a3905abb1008f6811ad648a2c54b79961c95a6f5"
 
       def install
         bin.install "gut"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/julien040/gut/releases/download/0.3.0/gut_Darwin_x86_64.tar.gz"
-      sha256 "3e1f2328e8e727418736d7baf0ab163f823593c40d9771aafb4f54d3a7759fd9"
+    on_arm do
+      url "https://github.com/julien040/gut/releases/download/0.3.1/gut_Darwin_arm64.tar.gz"
+      sha256 "045cda0d6db45bce6c43f3fce59a7cce7c950e448ede79e56af79619e712ebbe"
 
       def install
         bin.install "gut"
@@ -30,20 +30,24 @@ class Gut < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/julien040/gut/releases/download/0.3.0/gut_Linux_arm64.tar.gz"
-      sha256 "0fecfbac1b2f94a8d30fa2215c06911361d9f679f38bab5b4cae342abdfdace5"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/julien040/gut/releases/download/0.3.1/gut_Linux_x86_64.tar.gz"
+        sha256 "1de8f717acc50728439c11336b137220903e40e635d2aca17b15f7b3645110cc"
 
-      def install
-        bin.install "gut"
+        def install
+          bin.install "gut"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/julien040/gut/releases/download/0.3.0/gut_Linux_x86_64.tar.gz"
-      sha256 "39735351db45f7d91a6d52b556a92efb9d749f17e04a73f9be923dff7cd0eef2"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/julien040/gut/releases/download/0.3.1/gut_Linux_arm64.tar.gz"
+        sha256 "fd09b8fc826cc5d1340c6a6d36b9ca97f3eb94059b5e38d213431f601f2a36d0"
 
-      def install
-        bin.install "gut"
+        def install
+          bin.install "gut"
+        end
       end
     end
   end
