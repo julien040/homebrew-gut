@@ -5,23 +5,23 @@
 class Gut < Formula
   desc "Gut is an easy to use Git client for the command line."
   homepage "https://gut-cli.dev"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
 
   depends_on "git"
 
   on_macos do
     on_intel do
-      url "https://github.com/julien040/gut/releases/download/0.3.1/gut_Darwin_x86_64.tar.gz"
-      sha256 "1852c3b00c1388e1da474ad9a3905abb1008f6811ad648a2c54b79961c95a6f5"
+      url "https://github.com/julien040/gut/releases/download/0.3.2/gut_Darwin_x86_64.tar.gz"
+      sha256 "813d816decd84948dfc490ab11553b8261ec023e5613669e4bfe1e96ff91000d"
 
       def install
         bin.install "gut"
       end
     end
     on_arm do
-      url "https://github.com/julien040/gut/releases/download/0.3.1/gut_Darwin_arm64.tar.gz"
-      sha256 "045cda0d6db45bce6c43f3fce59a7cce7c950e448ede79e56af79619e712ebbe"
+      url "https://github.com/julien040/gut/releases/download/0.3.2/gut_Darwin_arm64.tar.gz"
+      sha256 "35d6bff5303ca26e7992d1abbf51541394a25efdea2944f6e398451a6a7f0e3a"
 
       def install
         bin.install "gut"
@@ -32,8 +32,8 @@ class Gut < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/julien040/gut/releases/download/0.3.1/gut_Linux_x86_64.tar.gz"
-        sha256 "1de8f717acc50728439c11336b137220903e40e635d2aca17b15f7b3645110cc"
+        url "https://github.com/julien040/gut/releases/download/0.3.2/gut_Linux_x86_64.tar.gz"
+        sha256 "85360bf7835f62b5e8d1091835398ae1656c736521132b3cc2e3d8a8b1eeda05"
 
         def install
           bin.install "gut"
@@ -42,8 +42,8 @@ class Gut < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/julien040/gut/releases/download/0.3.1/gut_Linux_arm64.tar.gz"
-        sha256 "fd09b8fc826cc5d1340c6a6d36b9ca97f3eb94059b5e38d213431f601f2a36d0"
+        url "https://github.com/julien040/gut/releases/download/0.3.2/gut_Linux_arm64.tar.gz"
+        sha256 "46ecc72a11c229aef5ac83ce936b13b63cb0f546da506f2d79532d4234e08d75"
 
         def install
           bin.install "gut"
